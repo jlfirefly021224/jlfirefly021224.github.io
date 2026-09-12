@@ -21,13 +21,15 @@
   <div id="hasil"></div>
 
   <script>
-    function onTelegramAuth(user) {
-      document.getElementById("hasil").innerHTML =
-        "<h2>Login berhasil</h2>" +
-        "<p>ID Telegram: " + user.id + "</p>" +
-        "<p>Nama: " + (user.first_name || "") + "</p>" +
-        "<p>Username: " + (user.username ? "@" + user.username : "Tidak ada") + "</p>";
-    }
-  </script>
+  function onTelegramAuth(user) {
+    document.getElementById("hasil").innerHTML =
+      "<h2>Login berhasil</h2>" +
+      "<p>Membuka Telegram Web K...</p>";
+
+    setTimeout(function () {
+      window.location.href = "https://web.telegram.org/k/";
+    }, 1000);
+  }
+</script>
 </body>
 </html>
